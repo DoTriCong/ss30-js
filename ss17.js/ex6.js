@@ -1,0 +1,18 @@
+let value1 = "5";
+let number1 = Number(value1); 
+console.log(`Chuyển đổi giá trị "${value1}" thành số:`, number1);
+let value2 = "-1";
+let number2 = Number(value2); 
+console.log(`Chuyển đổi giá trị "${value2}" thành số:`, number2);
+let value3 = "Hello";
+let number3 = Number(value3); 
+console.log(`Chuyển đổi giá trị "${value3}" thành số:`, number3);
+let value4 = 55;
+let string1 = String(value4); 
+console.log(`Chuyển đổi giá trị ${value4} thành chuỗi:`, string1);
+let value5 = -10;
+let string2 = String(value5); 
+console.log(`Chuyển đổi giá trị ${value5} thành chuỗi:`, string2);
+let value6 = 0;
+let string3 = String(value6);
+console.log(`Chuyển đổi giá trị ${value6} thành chuỗi:`, string3);

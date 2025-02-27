@@ -1,0 +1,10 @@
+let radius = +prompt(`nhap ban kinh`);
+let height = +prompt(`nhap chieu cao`);
+let sXungQuanh = 2 * Math.PI * radius * height;
+let sToanPhan = 2 * Math.PI * radius * (radius + height);
+let v = Math.PI * radius * radius * height;
+let chuViDay = 2 * Math.PI * radius;
+alert(`dien tich xung quanh cua hinh tru la ${sXungQuanh}`);
+alert(`dien tich toan phancua hinh tru la ${sToanPhan}`);
+alert(`the tich cua hinh tru la ${v}`);
+alert(`chu vi day cua hinh tru la ${chuViDay}`);
