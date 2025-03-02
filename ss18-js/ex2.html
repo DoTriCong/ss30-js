@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let math = +prompt("Moi ban nhap diem mon toan");
+      let literature = +prompt("Moi ban nhap diem mon van");
+      let english = +prompt("Moi ban nhap diem mon anh");
+      let results = (math + literature + english) / 3;
+      if (isNaN(math) || isNaN(literature) || isNaN(english)) {
+        alert(`So ban nhap khong hop le moi ban nhap lai`);
+      } else if (results >= 8.0 && results <= 10.0) {
+        alert(`Gioi`);
+      } else if (6.5 <= results && results <= 7.9) {
+        alert(`Kha`);
+      } else if (5.0 <= results && results <= 6.4) {
+        alert(`Trung binh`);
+      } else {
+        alert(`Yeu`);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let year = prompt("Nhap so nam kinh nghiem cua nhan vien");
+      if (isNaN(year)) {
+        alert(`So nam ban nhap khong hop le moi ban nhap lai`);
+      } else if (year < 1) {
+        alert(`Moi vao nghe`);
+      } else if (1 <= year && year <= 3) {
+        alert(`Nhan vien co kinh nghiem`);
+      } else if (4 <= year && year <= 6) {
+        alert(`Chuyen nghiep`);
+      } else {
+        alert(`Quan ly`);
+      }
+    </script>
+  </body>
+</html>

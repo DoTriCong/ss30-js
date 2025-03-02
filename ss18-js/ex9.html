@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let hours = +prompt("Nhap gio (0-23)");
+      let minutes = +prompt("Nhap phut (0-59)");
+      let second = +prompt("Nhap giay (0-59)");
+      let time;
+      if (hours === 0) {
+        document.write((time = `${hours}h:${minutes}p:${second}s AM`));
+      } else if (hours >= 1 && hours <= 11) {
+        document.write((time = `${hours}h:${minutes}p:${second}s AM`));
+      } else if (hours === 12) {
+        document.write((time = `${hours}h:${minutes}p:${second}s PM`));
+      } else if (hours >= 13 && hours <= 23) {
+        hours = hours - 12;
+        document.write((time = `${hours}h:${minutes}p:${second}s PM`));
+      } else {
+        document.write(`Thoi gian nhap vao khong hop le`);
+      }
+    </script>
+  </body>
+</html>

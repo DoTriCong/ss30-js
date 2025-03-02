@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let number1 = +prompt("Nhap canh a");
+      let number2 = +prompt("Nhap canh b");
+      let number3 = +prompt("Nhap canh c");
+      if ((number1 === number2) === number3) {
+        document.write(`Tam giac deu`);
+      } else if (
+        number1 === number2 ||
+        number2 === number3 ||
+        number3 === number1
+      ) {
+        document.write(`Tam giac can`);
+      } else if (number1 ** 2 + number2 ** 2 === number3 ** 2) {
+        document.write(`Tam giac vuong`);
+      } else if (
+        number1 + number2 > number3 &&
+        number1 + number3 > number2 &&
+        number2 + number3 > number1
+      ) {
+        document.write(`Tam giac thuong`);
+      } else {
+        document.write(`khong the tao thanh tam giac`);
+      }
+    </script>
+  </body>
+</html>

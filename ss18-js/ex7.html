@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = +prompt("Nhap so a");
+      let b = +prompt("Nhap so b");
+      let operator = prompt("Nhap phep tinh (+, -, *, /)");
+      let cong = a + b;
+      let tru = a - b;
+      let nhan = a * b;
+      let chia = a / b;
+      switch (operator) {
+        case "+":
+          document.write(`a + b = ${cong}`);
+          break;
+        case "-":
+          document.write(`a - b = ${tru}`);
+          break;
+        case "*":
+          document.write(`a * b = ${nhan}`);
+          break;
+        case "/":
+          document.write(`a / b = ${chia}`);
+          break;
+        default:
+          document.write(`Phep tinh khong hop le`);
+      }
+    </script>
+  </body>
+</html>
