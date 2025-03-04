@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let input = prompt("Mời bạn nhập vào một chuỗi số:");
+      let isPalindrome = true;
+      if (isNaN(input) || input <= 0) {
+        document.write("Dữ liệu nhập vào không hợp lệ");
+      } else {
+        let len = input.length;
+        for (let i = 0; i < len / 2; i++) {
+          if (input.charAt(i) !== input.charAt(len - i - 1)) {
+            isPalindrome = false;
+            break;
+          }
+        }
+        if (isPalindrome) {
+          document.write(input + " là số đối xứng");
+        } else {
+          document.write(input + " không phải là số đối xứng");
+        }
+      }
+    </script>
+  </body>
+</html>

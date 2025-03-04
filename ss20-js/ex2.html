@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let number = +prompt("Mời bạn nhập vào một số");
+      let result = "";
+      if (isNaN(number) || number <= 0) {
+        document.write("Dữ liệu nhập vào không hợp lệ");
+      } else {
+        for (let i = 1; i <= number; i++) {
+          if (i % 5 == 0) {
+            result += i + " ";
+          }
+        }
+        document.write(
+          "Các số chia hết cho 5 trong khoảng từ 1 đến " +
+            number +
+            " là: " +
+            result
+        );
+      }
+    </script>
+  </body>
+</html>
