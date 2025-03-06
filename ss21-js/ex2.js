@@ -13,5 +13,5 @@ for (let i = 0; i < 5; i++) {
         sumEven += num;
     }
 }
-document.write(`Tổng các số lẻ: ${sumOdd} <br/>`);
-document.write(`Tổng các số chẵn: ${sumEven}`);
+console(`Tổng các số lẻ: ${sumOdd} <br/>`);
+console(`Tổng các số chẵn: ${sumEven}`);

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let choice;
+      const prices = [];
+      do {
+        choice = +prompt(
+          "Moi ban nhap yeu cau: 1.Nhap vao mang, 2.Hien thi mang, 3.Them phan tu, 4.Sua phan tu, 5.Xoa phan tu, 6.Thoat"
+        );
+        switch (choice) {
+          case 1:
+            let priceInput = prompt("Moi ban nhap vao mang");
+            prices.push(priceInput);
+            alert("Nhập thành công!");
+            break;
+          case 2:
+            console.log("Danh sach mang", prices);
+            break;
+          case 3:
+            let newPrice = prompt("Nhập giá trị cần thêm:");
+            prices.push(newPrice);
+            alert("Thêm thành công!");
+            break;
+          case 4:
+            const indexEdit = +prompt("Moi ban nhap vi tri");
+            const valueEdit = prompt("Nhap gia tri moi:");
+            if (indexEdit < prices.length) {
+              prices[indexEdit] = valueEdit;
+              alert("Cap nhat thanh cong");
+            } else {
+              alert("Vi tri khong hop le");
+            }
+            break;
+          case 5:
+            const indexDelete = +prompt("Nhập vị trí cần xóa:");
+            if (indexDelete >= 0 && indexDelete < prices.length) {
+              prices.splice(indexDelete, 1);
+              alert("Xóa thành công!");
+            } else {
+              alert("Vị trí không hợp lệ");
+            }
+            break;
+          case 6:
+            alert("Thoát chương trình!");
+            choice = 0;
+            break;
+        }
+      } while (choice !== 0);
+    </script>
+  </body>
+</html>
