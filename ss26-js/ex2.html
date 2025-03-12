@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function filterStrings(inputArray) {
+        if (!Array.isArray(inputArray)) {
+          return "Dữ liệu không hợp lệ";
+        }
+        const result = inputArray.filter(
+          (item) => typeof item === "string" && item.length > 5
+        );
+        if (result.length === 0) {
+          return "Mảng không có phần tử nào";
+        }
+
+        return result;
+      }
+      let input1 = ["apple", "banana", "cat", "elephant", "dog"];
+      console.log(filterStrings(input1));
+      let input2 = [];
+      console.log(filterStrings(input2));
+      let input3 = "abc";
+      console.log(filterStrings(input3));
+    </script>
+  </body>
+</html>

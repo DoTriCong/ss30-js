@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function evenNumber(inputArray) {
+        if (!Array.isArray(inputArray)) {
+          return "Dữ liệu không hợp lệ";
+        }
+        if (inputArray.length === 0) {
+          return "Mảng không có dữ liệu";
+        }
+        const result = inputArray
+          .map((num) => num ** 2)
+          .filter((num) => num % 2 === 0);
+        return result.length > 0
+          ? result
+          : "Mảng không có phần tử nào thỏa mãn";
+      }
+      let input1 = [2, 5, 10];
+      console.log(evenNumber(input1));
+      let input2 = [];
+      console.log(evenNumber(input2));
+      let input3 = "abc";
+      console.log(evenNumber(input3));
+    </script>
+  </body>
+</html>

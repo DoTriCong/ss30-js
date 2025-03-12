@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function filterValidEmails(inputArray) {
+        if (!Array.isArray(inputArray)) {
+          return "Dữ liệu không hợp lệ";
+        }
+        const validEmails = inputArray.filter(
+          (email) =>
+            typeof email === "string" &&
+            email.includes("@") &&
+            !email.includes(" ")
+        );
+        if (validEmails.length === 0) {
+          return "Mảng không có phần tử nào";
+        }
+        return validEmails;
+      }
+      let input1 = [
+        "john.doe@gmail.com",
+        "invalidemail.com",
+        "hello@domain.net",
+        "space@out.com",
+      ];
+      console.log(filterValidEmails(input1));
+      let input2 = [];
+      console.log(filterValidEmails(input2));
+      let input3 = "abc";
+      console.log(filterValidEmails(input3));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function findMax(inputArray) {
+        if (!Array.isArray(inputArray)) {
+          return "Dữ liệu không hợp lệ";
+        }
+        if (inputArray.length === 0) {
+          return "Mảng không có dữ liệu";
+        }
+        const max = Math.max(...inputArray);
+        const position = inputArray.indexOf(max);
+
+        return { max, position };
+      }
+      let input1 = [10, 9, 5, 11, 24, 5];
+      const result1 = findMax(input1);
+      console.log("Max =", result1.max);
+      console.log("Position:", result1.position);
+      let input2 = [];
+      console.log(findMax(input2));
+      let input3 = "abc";
+      console.log(findMax(input3));
+    </script>
+  </body>
+</html>

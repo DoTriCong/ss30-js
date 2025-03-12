@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array = [1, 22, 10, 9, 8, 15, 3, 18, 7, 12];
+      function filterNumbers(array) {
+        return array.filter((number) => number >= 10);
+      }
+      let result = filterNumbers(array);
+      if (result.length > 0) {
+        console.log(result);
+      } else {
+        console.log("Mảng không có số lớn hơn hoặc bằng 10.");
+      }
+    </script>
+  </body>
+</html>
