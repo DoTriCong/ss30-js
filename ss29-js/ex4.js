@@ -7,7 +7,6 @@ function addTask() {
     const startTime = prompt("Nhập thời gian bắt đầu (định dạng: yyyy-mm-dd): ");
     const taskStatus = prompt("Nhập trạng thái công việc (hoàn thành/chưa hoàn thành): ");
     const taskId = Math.ceil(Math.random() * 1000000);
-
     const task = {
         id: taskId,
         name: taskName,
@@ -15,7 +14,6 @@ function addTask() {
         startTime: startTime,
         status: taskStatus.toLowerCase()
     };
-
     taskList.push(task);
     alert("Công việc đã được thêm thành công!");
 }
@@ -30,11 +28,11 @@ function displayAllTasks() {
 
 function updateTaskStatus() {
     const taskIdToUpdate = +prompt("Nhập ID công việc cần cập nhật trạng thái: ");
-    const task = taskList.find(task => task.id === taskIdToUpdate);
+    const taskToUpdate = taskList.find(task => task.id === taskIdToUpdate);
 
-    if (task) {
+    if (taskToUpdate) {
         const newStatus = prompt("Nhập trạng thái mới (hoàn thành/chưa hoàn thành): ").toLowerCase();
-        task.status = newStatus;
+        taskToUpdate.status = newStatus;
         alert("Trạng thái công việc đã được cập nhật!");
     } else {
         alert("Không tìm thấy công việc với ID này.");
