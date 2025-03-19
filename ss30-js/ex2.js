@@ -9,17 +9,17 @@ let cart = [];
 
 function showBooksByCategory(category) {
     let filteredBooks = books.filter(book => book.category === category);
-    console.log("Books in category", category, filteredBooks);
+    console.log("Sách trong danh mục", category, filteredBooks);
 }
 
 function addBook(id, name, price, quantity, category) {
     books.push({ id, name, price, quantity, category });
-    console.log("Book added successfully!");
+    console.log("Thêm sách thành công!");
 }
 
 function searchBook(query) {
     let result = books.filter(book => book.name.includes(query) || book.id === query);
-    console.log("Search results:", result);
+    console.log("Kết quả tìm kiếm:", result);
 }
 
 function buyBook(id, quantity) {
@@ -27,15 +27,15 @@ function buyBook(id, quantity) {
     if (book && book.quantity >= quantity) {
         book.quantity -= quantity;
         cart.push({ id: book.id, name: book.name, price: book.price, quantity });
-        console.log("Book added to cart!");
+        console.log("Sách được thêm vào giỏ hàng!");
     } else {
-        console.log("Not enough stock!");
+        console.log("sách trống!");
     }
 }
 
 function sortBooksByPrice(order) {
     let sortedBooks = [...books].sort((a, b) => order === "asc" ? a.price - b.price : b.price - a.price);
-    console.log("Sorted books:", sortedBooks);
+    console.log("Sách được sắp xếp:", sortedBooks);
 }
 
 function getTotalCart() {
